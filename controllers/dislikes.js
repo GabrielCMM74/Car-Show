@@ -1,11 +1,11 @@
 const Post = require('../models/post');
 
 module.exports = {
-    createLike,
-    deleteLike
+    createDislike,
+    deleteDislike
 }
 
-async function createLike(req, res){
+async function createDislike(req, res){
 
     try {
 		// Find a post, so we need the id of the post
@@ -21,7 +21,7 @@ async function createLike(req, res){
     
 }
 
-async function deleteLike(req, res){
+async function deleteDislike(req, res){
     try {
         
         const post = await Post.findOne({'likes._id': req.params.id, 'likes.username': req.user.username});
