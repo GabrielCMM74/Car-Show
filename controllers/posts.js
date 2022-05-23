@@ -5,11 +5,11 @@ const { v4: uuidv4 } = require('uuid');
 const s3 = new S3();
 
 module.exports = {
-    create,
-    index
+    createPost,
+    postIndex
 }
 
-function create(req, res){
+function createPost(req, res){
     console.log(req.file, req.body, 'this is create method', req.user)
     try {
         const filePath = `${uuidv4()}/${req.file.originalname}`
@@ -31,7 +31,7 @@ function create(req, res){
     }
 }
 
-async function index(req, res){
+async function postIndex(req, res){
     try {
         // this populates the user when you find the posts
         // so you'll have access to the users information 
