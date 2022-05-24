@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Dimmer, Segment, Image  } from 'semantic-ui-react'
 import PostCard from '../PostCard/PostCard';
-import Loader from '../Loader/Loader';
+import Loader from '../PageLoader/PageLoader';
 
 export default function PostFeed({posts, numPhotosCol, isProfile, loading, addLike, removeLike, user }){
 

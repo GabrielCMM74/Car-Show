@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-import PageHeader from "../../components/Header/Header";
-import AddPostForm from "../../components/AddPostForm/AddPostForm";
+import PageHeader from "../../components/PageHeader/PageHeader";
+import AddPostForm from "../../components/AddCarPostForm/AddCarPostForm";
 import PostGallery from "../../components/PostGallery/PostGallery";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-import Loading from "../../components/Loader/Loader";
+import Loading from "../../components/PageLoader/PageLoader";
 import * as postsAPI from "../../utils/postApi";
 import * as likesAPI from '../../utils/likeApi';
 
