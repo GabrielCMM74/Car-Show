@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Button, Form, Grid, Segment } from 'semantic-ui-react'
+import { Button, Form, Grid, Segment, Icon } from 'semantic-ui-react'
 
 export default function AddPuppyForm(props){
   const [selectedFile, setSelectedFile] = useState('')
@@ -55,12 +55,12 @@ export default function AddPuppyForm(props){
                 placeholder="upload image"
                 onChange={handleFileInput}
               />   
-              <Button
-                type="submit"
-                className="btn"
-              >
-                ADD PUPPY
-              </Button>
+              <Button size='medium' color="youtube" type="submit" animated>
+                <Button.Content visible>Add Car Show</Button.Content>
+                <Button.Content hidden>
+                <Icon name='arrow right' />
+                </Button.Content>
+            </Button>
             </Form>
           </Segment>
       </Grid.Column>

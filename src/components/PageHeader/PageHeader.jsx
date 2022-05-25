@@ -8,14 +8,14 @@ export default function PageHeader({ user, handleLogout }) {
     <Segment clearing>
       <Header as="h2" floated="right">
         <Link to="/">
-          <Icon name="home"></Icon>
+          <Icon color="red" name="car"></Icon>
         </Link>
-        <Link to="" onClick={handleLogout}>
-          Logout
+        <Link to=""onClick={handleLogout}><Icon color="black" name="log out"></Icon> 
+         
         </Link>
       </Header>
       <Header as="h2" floated="left">
-        <Link to={`/${user?.username}`}>
+        <Link to="/">
           <Image
             src={
               user?.photoUrl
@@ -29,3 +29,4 @@ export default function PageHeader({ user, handleLogout }) {
     </Segment>
   );
 }
+
