@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Icon, Image } from "semantic-ui-react";
+import { Card, Icon, Image, Button, Label } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 function PostCard({ post, isProfile, removeLike, addLike, user }) {
   // call the addLike or the removeLike when we click on the heart!
@@ -50,13 +50,17 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
         <Card.Description>{post.caption}</Card.Description>
       </Card.Content>
       <Card.Content extra textAlign={"right"}>
-        <Icon
-          name={"heart"}
-          size="large"
-          color={likeColor}
-          onClick={clickHandler}
-        />
-        {post.likes.length} Likes
+      <Button as='div' labelPosition='right'>
+      <Button color='red' onClick={clickHandler}>
+        <Icon name='heart' />
+        Like
+      </Button>
+      <Label as='a' basic color='red' pointing='left'>
+        
+    {post.likes.length} 
+      </Label>
+    </Button>
+       
       </Card.Content>
     </Card>
   );

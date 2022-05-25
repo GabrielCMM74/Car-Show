@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Grid } from "semantic-ui-react";
+import { Grid, Container } from "semantic-ui-react";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import Loading from "../../components/PageLoader/PageLoader";
 import ProfileBio from "../../components/ProfileBio/ProfileBio";
@@ -8,6 +8,7 @@ import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 
 import userService from "../../utils/userService";
 import * as likesAPI from '../../utils/likeApi';
+import * as postsApi from '../../utils/postApi';
 
 import { useParams } from "react-router-dom";
 
@@ -23,7 +24,21 @@ export default function ProfilePage(props) {
   // We need to grab the username out of the url,
   const { username } = useParams();
 
+  useEffect(() => {
+    getProfile();
+}, [username]);
 
+
+      async function getProfile() {
+        try {
+            const data = await userService.getProfile(username);
+            setPosts(data.posts);
+            setUser(data.user);
+            setLoading(false);
+        } catch (err) {
+            setError(err.message);
+        }
+    }
   async function addLike(postId){
     try {
       const data = await likesAPI.create(postId)

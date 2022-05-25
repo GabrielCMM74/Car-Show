@@ -7,11 +7,10 @@ export default function PageHeader({ user, handleLogout }) {
   return (
     <Segment clearing>
       <Header as="h2" floated="right">
-        <Link to="/">
+        <Link to="/" >
           <Icon color="red" name="car"></Icon>
         </Link>
-        <Link to=""onClick={handleLogout}><Icon color="black" name="log out"></Icon> 
-         
+        <Link to="" onClick={handleLogout}><Icon color="black" name="log out"></Icon> 
         </Link>
       </Header>
       <Header as="h2" floated="left">

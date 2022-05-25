@@ -2,6 +2,7 @@ import React, { useState} from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import SignupPage from '../SignupPage/SignupPage';
+
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
 import FeedPage from '../FeedPage/FeedPage'; 
@@ -50,6 +51,7 @@ function App() {
         path="/signup"
         element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
       />
+      
       <Route path="/*" element={<Navigate to="/login" />} />
     </Routes>
   );
