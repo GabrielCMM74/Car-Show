@@ -121,7 +121,7 @@ export default function Feed({user, handleLogout}) {
         <Grid.Column style={{ maxWidth: 450 }}>
           <PostGallery
             posts={posts}
-            numPhotosCol={1}
+            numPhotosCol={2}
             isProfile={false}
             loading={loading}
             addLike={addLike}
