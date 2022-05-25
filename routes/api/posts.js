@@ -9,7 +9,14 @@ router.get('/', postsCtrl.postIndex)
 
 
 /*---------- Protected Routes ----------*/
-
+// function isAuthenticated(req, res, next){
+//     console.log("made to routes")
+//     if(req.user){
+//         return next()
+//     }else{
+//         res.status(401).json({message: 'Not Authorized'})
+//     }
+// }
 module.exports = router;
 
 
