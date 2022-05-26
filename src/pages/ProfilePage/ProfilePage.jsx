@@ -104,7 +104,12 @@ export default function ProfilePage(props) {
   }
 
   return (
-    <Grid>
+    <Grid
+    style={{
+      height:"100vh",
+      backgroundColor: 'black',
+
+  }}>
       <Grid.Row>
         <Grid.Column>
           <PageHeader handleLogout={props.handleLogout} user={props.user}/>

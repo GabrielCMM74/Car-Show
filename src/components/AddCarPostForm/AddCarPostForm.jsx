@@ -36,9 +36,9 @@ export default function AddPuppyForm(props){
     
     <Grid textAlign='center' style={{ height: '25vh' }} verticalAlign='middle'>
       <Grid.Column style={{ maxWidth: 450 }}>
-        <Segment>
+        <Segment inverted>
         
-            <Form  autoComplete="off" onSubmit={handleSubmit}>
+            <Form inverted autoComplete="off" onSubmit={handleSubmit}>
             
               <Form.Input
                   className="form-control"

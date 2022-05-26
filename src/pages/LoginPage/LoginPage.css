@@ -1,8 +1,7 @@
-/* body{
-    background-color: black;
+body{
     font-family:Verdana, Geneva, Tahoma, sans-serif
-} */
-.ui.header>.image:not(.icon), .ui.header>img{
+}
+.ui.header>.image:not(.icon), .ui.header >img{
     height: auto;
     width: 40rem;
 }

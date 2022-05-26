@@ -108,7 +108,12 @@ export default function Feed({user, handleLogout}) {
   } 
 
   return (
-    <Grid centered>
+    <Grid centered
+    style={{
+      height:"auto",
+      backgroundColor: 'grey',
+
+  }}>
       <Grid.Row>
         <Grid.Column>
           <PageHeader handleLogout={handleLogout} user={user}/>
@@ -116,7 +121,7 @@ export default function Feed({user, handleLogout}) {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column style={{ maxWidth: 450 }}>
-          <AddPostForm handleAddPost={handleAddPost} />
+          <AddPostForm  handleAddPost={handleAddPost} />
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
