@@ -8,14 +8,11 @@ module.exports = {
 async function createLike(req, res){
 
     try {
-		// Find a post, so we need the id of the post
         const post = await Post.findById(req.params.id);
-		
-        post.likes.push({username: req.user.username, userId: req.user._id}); //mutating a document
+        post.likes.push({username: req.user.username, userId: req.user._id}); 
         await post.save()// save it
         res.status(201).json({data: 'like added'})
     } catch(err){
-
         res.status(400).json({err})
     }
     
@@ -23,12 +20,10 @@ async function createLike(req, res){
 
 async function deleteLike(req, res){
     try {
-        
         const post = await Post.findOne({'likes._id': req.params.id, 'likes.username': req.user.username});
-        post.likes.remove(req.params.id) // mutating a document
+        post.likes.remove(req.params.id)
 		console.log(post, " <-= post in delete!")
-        // req.params.id is the like id 
-        await post.save() // after you mutate a document you must save
+        await post.save() 
         res.json({data: 'like removed'})
     } catch(err){
         res.status(400).json({err})

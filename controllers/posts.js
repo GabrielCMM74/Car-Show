@@ -18,9 +18,7 @@ function createPost(req, res){
 			console.log(err, ' from aws')
             const post = await Post.create({caption: req.body.caption, user: req.user, photoUrl: data.Location});
             console.log(post)
-			// make sure the post we're sending back has the user populated
 			await post.populate('user');
-		
             res.status(201).json({post: post})
         })
 
@@ -33,9 +31,6 @@ function createPost(req, res){
 
 async function postIndex(req, res){
     try {
-        // this populates the user when you find the posts
-        // so you'll have access to the users information 
-        // when you fetch teh posts
         const posts = await Post.find({}).populate('user').exec()
         res.status(200).json({posts})
     } catch(err){
