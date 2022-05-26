@@ -68,10 +68,17 @@ export default function SignUpPage(props) {
 
 
   return (
-    <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
-      <Grid.Column style={{ maxWidth: 450 }}>
-        <Header as="h2" color="teal" textAlign="center">
-          <Image src="https://i.imgur.com/s4LrnlU.png" /> Sign Up
+    <Grid textAlign="center" style={{ 
+      height: "100vh",
+      backgroundImage:  'linear-gradient(315deg, #000000 0%, #b82e1f 74%)', 
+      
+     }} verticalAlign="middle">
+      <Grid.Column style={{ maxWidth: 450}}>
+        <Header as="h1" color="white"  textAlign="center" 
+        style={{ 
+          backgroundColor: "White", 
+         }}  >
+          Sign Up
         </Header>
         <Form autoComplete="off" onSubmit={handleSubmit}>
           <Segment stacked>
@@ -109,7 +116,7 @@ export default function SignUpPage(props) {
             <Form.TextArea
               label="bio"
               name="bio"
-              placeholder="Tell us more about your dogs..."
+              placeholder="Tell us more about yourself..."
               onChange={handleChange}
             />
             <Form.Field>

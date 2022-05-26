@@ -106,10 +106,9 @@ export default function ProfilePage(props) {
   return (
     <Grid
     style={{
-      height:"100vh",
-      backgroundColor: 'black',
-
-  }}>
+      height:"auto",
+      backgroundImage:  'linear-gradient(315deg, #485461 0%, #28313b 74%)', 
+          }}>
       <Grid.Row>
         <Grid.Column>
           <PageHeader handleLogout={props.handleLogout} user={props.user}/>
@@ -125,7 +124,7 @@ export default function ProfilePage(props) {
         <PostGallery
             isProfile={true}
             posts={posts}
-            numPhotosCol={3}
+            numPhotosCol={2}
             user={props.user}
             addLike={addLike}
             removeLike={removeLike}
