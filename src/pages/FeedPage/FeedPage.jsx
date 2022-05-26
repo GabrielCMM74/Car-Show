@@ -111,12 +111,17 @@ export default function Feed({user, handleLogout}) {
     <Grid centered
     style={{
       height:"auto",
-      backgroundColor: 'grey',
+      backgroundImage:  'linear-gradient(315deg, #000000 0%, #b82e1f 74%)', 
+      // background-image: linear-gradient(315deg, #000000 0%, #b82e1f 74%);,
 
   }}>
       <Grid.Row>
         <Grid.Column>
-          <PageHeader handleLogout={handleLogout} user={user}/>
+          <PageHeader style={{
+      backgroundColor:'black', 
+      // background-image: linear-gradient(315deg, #000000 0%, #b82e1f 74%);,
+
+  }} handleLogout={handleLogout} user={user}/>
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>

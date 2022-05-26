@@ -5,12 +5,15 @@ import { Header, Segment, Image, Icon } from "semantic-ui-react";
 export default function PageHeader({ user, handleLogout }) {
     console.log(user, 'user in header')
   return (
-    <Segment clearing>
+    <Segment style={{ 
+      backgroundImage:  "url(" + "https://miro.medium.com/max/768/0*_pG4sF5hbeR702n-.jpg" + ")"
+      
+      }} clearing>
       <Header as="h2" floated="right">
         <Link to="/" >
           <Icon color="red" name="car"></Icon>
         </Link>
-        <Link to="" onClick={handleLogout}><Icon color="black" name="log out"></Icon> 
+        <Link to="" onClick={handleLogout}><Icon color="green" name="log out"></Icon> 
         </Link>
       </Header>
       <Header as="h2" floated="left">
