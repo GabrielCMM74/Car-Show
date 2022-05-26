@@ -5,6 +5,8 @@ import AddPostForm from "../../components/AddCarPostForm/AddCarPostForm";
 import PostGallery from "../../components/PostGallery/PostGallery";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../components/PageLoader/PageLoader";
+import "./FeedPage.css";
+
 import * as postsAPI from "../../utils/postApi";
 import * as likesAPI from '../../utils/likeApi';
 

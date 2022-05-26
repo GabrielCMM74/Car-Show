@@ -46,8 +46,14 @@ export default function LoginPage(props) {
   return (
     <>
       <Grid
+        class="login"
         textAlign="center"
-        style={{height:"90vh"}}
+        style={{
+          height:"90vh",
+          backgroundColor: 'black',
+          FontFace: ""
+
+      }}
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
@@ -78,18 +84,13 @@ export default function LoginPage(props) {
                 onChange={handleChange}
                 required
               />
-              <Button
-                color="teal"
-                fluid
-                size="large"
-                type="submit"
-                className="btn"
-              >
-                Login
+              <Button animated='fade' fluid type="submit" className="btn" size="large">
+                <Button.Content visible>Log In</Button.Content>
+                <Button.Content hidden>Click Here</Button.Content>
               </Button>
             </Segment>
           </Form>
-          <Message color="black" as="h1">
+          <Message color="black" as="h1" size="large">
             New to us?   <Link to="/signup">Sign Up</Link>
           </Message>
           {error ? <ErrorMessage error={error} /> : null}
