@@ -1,0 +1,8 @@
+body{
+    background-color: black;
+
+}
+.ui.header>.image:not(.icon), .ui.header>img{
+    height: auto;
+    width: 40rem;
+}
