@@ -1,37 +1,42 @@
-## Setup 
+# Auto Show:
 
-1. Clone the repo
-2. Rename the folder to your Project, you can use the `mv` command like `mv mern-boilerplate yourprojectname`
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+### Post your favorite Car here and view other car shows!
+<p>This application is meant as an enthusiast tool for people who love going to car shows. 
+
+<p>This full-stack MERN application uses react, node, and JWT tokens to provide a seemless user experience. Allowing you to sign up, post, like, and view Car Enthusiasts profile. 
+
+- Auto Show App: https://autoshows.herokuapp.com/
+
+![Login](screenshots/Login.png)
+
+![Feed Page](screenshots/Feed.png)
 
 
-#### Setup your git repo
+#### Technologies used:
+> React
+>
+> NodeJS
+>
+> Express
+>
+> MongoDB/Mongoose
+>
+> JWT Web Token 
+>
+> Javascript
+>
+> Semantic UI
+>
+> AWS
+>
+> CSS
+>
 
-1. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-2. Then you can run the following commands in the root of your project 
-
-```
-git init
-git add .
-git commit -m "first commit"
-git remote add origin git@git.generalassemb.ly:SEI-CC/test.git // this will be whatever your address will be, look at the address in the code github gives you!
-git push -u origin main
-```
-
-#### Setup the App
-
-```npm install```
-
-*DOTENV*
-
-`touch .env`
-
-add your variables
-
-```
-DATABASE_URL=mongodb://localhost:27017/testagramV2
-BUCKET_NAME=catcollectorone
-SECRET=mysecretforjwt
-```
-
-The app is configured, to use those respective key names for the database, jwt secret and aws bucket, of course you'll have your own values
+### Getting Started:
+-  https://autoshows.herokuapp.com/
+- Trello: https://trello.com/b/fK0HmvWj/car-show-forumname-in-progress
+#### Planned Next Steps:
+- A user can dislike posts.
+- A user can edit and delete posts. 
+- Add an API for Car Shows in your local area.
+- Comment section under posts. 
