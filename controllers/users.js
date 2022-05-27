@@ -20,7 +20,7 @@ async function signup(req, res) {
 
 
   s3.upload(params, async function(err, data){
-    const user = new User({...req.body, photoUrl: data});
+    const user = new User({...req.body, photoUrl: data.Location});
       try {
         await user.save();
         const token = createJWT(user);
